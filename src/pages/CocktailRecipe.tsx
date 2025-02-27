@@ -1,4 +1,4 @@
-export const Recipe = () => {
+export const CocktailRecipe = () => {
     return (
         <div>
             recipe

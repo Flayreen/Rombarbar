@@ -21,7 +21,7 @@ const Sidebar = () => {
                 <nav className="pt-20">
                     <ul className="flex flex-col gap-10 px-4">
                         <li className="text-white text-base md:text-xl py-1 border-b-1">
-                            <Link to={WebLinks.Home}>
+                            <Link to={WebLinks.Alcohols}>
                                 <DrawerClose className="w-full flex justify-between">
                                     <MoveLeft strokeWidth={1} width={32} height={32} color="white" />
                                     <span>ПРО АЛКОГОЛЬ</span>
@@ -29,7 +29,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li className="text-white text-base md:text-xl py-1 border-b-1">
-                            <Link to={WebLinks.Home} className="flex justify-between">
+                            <Link to={WebLinks.Brands} className="flex justify-between">
                                 <DrawerClose className="w-full flex justify-between">
                                     <MoveLeft strokeWidth={1} width={32} height={32} color="white" />
                                     <span>ІСТОРІЯ БРЕНДІВ</span>
@@ -37,7 +37,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li className="text-white text-base md:text-xl py-1 border-b-1">
-                            <Link to={WebLinks.Home} className="flex justify-between">
+                            <Link to={WebLinks.Cocktails} className="flex justify-between">
                                 <DrawerClose className="w-full flex justify-between">
                                     <MoveLeft strokeWidth={1} width={32} height={32} color="white" />
                                     <span>КАТЕГОРІЯ КОКТЕЙЛІВ</span>

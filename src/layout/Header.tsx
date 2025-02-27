@@ -16,13 +16,13 @@ const Header = () => {
                     <nav className="hidden lg:block">
                         <ul className="flex gap-6">
                             <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
-                                <Link to={"/"}>ПРО АЛКОГОЛЬ</Link>
+                                <Link to={WebLinks.Alcohols}>ПРО АЛКОГОЛЬ</Link>
                             </li>
                             <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
-                                <Link to={"/"}>ІСТОРІЯ БРЕНДІВ</Link>
+                                <Link to={WebLinks.Brands}>ІСТОРІЯ БРЕНДІВ</Link>
                             </li>
                             <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white animate-in">
-                                <Link to={"/"}>КАТЕГОРІЯ КОКТЕЙЛІВ</Link>
+                                <Link to={WebLinks.Cocktails}>КАТЕГОРІЯ КОКТЕЙЛІВ</Link>
                             </li>
                         </ul>
                     </nav>

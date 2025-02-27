@@ -1,4 +1,9 @@
 export enum WebLinks {
     Home = "/",
-    Recipe = "recipe/:id"
+    Cocktails = "cocktails",
+    CocktailRecipe = "cocktails/:id",
+    Brands = "brands",
+    BrandHistory = "brands/:id",
+    Alcohols = "alcohols",
+    AlcoholHistory = "alcohols/:id",
 }
