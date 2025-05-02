@@ -3,17 +3,18 @@ import React from "react";
 import {cn} from "@/lib/utils.ts";
 
 interface StarDividerProps {
-    className?: string
+    className?: string;
+    variant?: "light" | "dark";
 }
 
-const StarDivider: React.FC<StarDividerProps> = ({className}) => {
+const StarDivider: React.FC<StarDividerProps> = ({ className, variant = "light" }) => {
     return (
-        <div className="w-full flex flex-nowrap gap-4 items-center">
-            <div className="w-full h-[1px] bg-white"/>
-            <div className={cn("text-white w-[8px] h-[8px]", className)}>
-                <StarIcon className={cn("text-white w-[8px] h-[8px]", className)}/>
+        <div className="w-full flex flex-nowrap gap-4 items-center justify-center">
+            <div className={cn("w-[28vw] h-[1px]", variant === "light" ? "bg-white" : "bg-primary")}/>
+            <div className={cn("w-[8px] h-[8px] md:w-[18px] md:h-[18px] xl:w-[24px] xl:h-[25px]", variant === "light" ? "text-white" : "text-primary", className)}>
+                <StarIcon className="w-[8px] h-[8px] md:w-[18px] md:h-[18px] xl:w-[24px] xl:h-[25px]" />
             </div>
-            <div className="w-full h-[1px] bg-white"/>
+            <div className={cn("w-[28vw] h-[1px]", variant === "light" ? "bg-white" : "bg-primary")}/>
         </div>
     );
 };
