@@ -1,0 +1,938 @@
+[
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Кровава Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["gin"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітан",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "djin-tonic",
+    "title": "Джин Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["liquor"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  }
+]

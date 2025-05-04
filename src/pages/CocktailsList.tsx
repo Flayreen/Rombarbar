@@ -1,85 +1,50 @@
 import {CocktailCard} from "@/components/cards/CocktailCard.tsx";
-import {ICocktail, cocktails, cocktailFilters, ICocktailFilters, TCocktailsLabel} from "@/database/cocktails.ts";
 import {Link} from "react-router-dom";
 import {getPathname} from "@/utils/getPathname.ts";
 import {WebLinks} from "@/routes/routes.ts";
-import {useState} from "react";
-import {Checkbox} from "@/components/ui/checkbox.tsx";
+import {useEffect} from "react";
+import Filters from "@/components/ui/filter.tsx";
+import {useCocktailsStore} from "@/store/cocktails-store.ts";
+import {cocktailsFilters} from "@/modules/cocktails-list/constants.ts";
+import {ICocktail} from "@/types/cocktail/ICocktail.ts";
+import PaginationLayout from "@/components/ui/pagination.tsx";
 
 
 export const CocktailsList = () => {
-    const [cocktailList, setCocktailList] = useState<ICocktail[]>(cocktails);
+    const {fetchCocktails, cocktails, pagination} = useCocktailsStore();
 
-    const handleFilter = (filterLabel: TCocktailsLabel, value: string): void => {
-        const filteredCocktails: ICocktail[] = cocktailList.filter((cocktail: ICocktail) => {
-            switch (filterLabel) {
-                case "category":
-                    return cocktail.characteristics.category === value;
-                case "strength":
-                    return cocktail.characteristics.strength === value;
-                case "taste":
-                    return cocktail.characteristics.taste === value;
-                case "base":
-                    return cocktail.characteristics.base === value;
-                case "complexity":
-                    return cocktail.characteristics.complexity === value;
-                default:
-                    return true;
-            }
-        })
-        setCocktailList(filteredCocktails);
-    }
+    useEffect(() => {
+        fetchCocktails();
+    }, [])
 
     return (
         <div className="container">
             <div>
-                <Filters handleFilter={handleFilter}/>
+                <Filters
+                    filterData={cocktailsFilters}
+                    fetchFilterData={fetchCocktails}
+                />
             </div>
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-y-13">
-                {cocktailList.map((cocktail: ICocktail) => (
-                    <Link key={cocktail.id} to={getPathname(WebLinks.CocktailRecipe, cocktail.id)}>
-                        <CocktailCard
-                            title={cocktail.title}
-                            imageUrl={cocktail.imageUrl}
-                        />
-                    </Link>
-                ))}
+                {cocktails.length > 0 ?
+                    cocktails.map((cocktail: ICocktail, index: number) => (
+                        <Link key={index} to={getPathname(WebLinks.CocktailRecipe, cocktail.id)}>
+                            <CocktailCard
+                                title={cocktail.title}
+                                imageUrl={cocktail.imageUrl}
+                            />
+                        </Link>
+                    ))
+                    : (
+                        <div>Empty</div>
+                    )}
             </div>
+
+            <PaginationLayout
+                pagination={pagination}
+                handlePaginate={(page: number) => fetchCocktails(undefined, page)}
+            />
         </div>
     );
 };
-
-const Filters = (
-    {
-        handleFilter,
-    } : {
-        handleFilter: (filterLabel: TCocktailsLabel, value: string) => void;
-    }
-) => {
-    return (
-        <div className="flex gap-4 justify-between">
-            {cocktailFilters.map((filterBlock: ICocktailFilters, index: number) => (
-                <div key={index} className="flex flex-col gap-8">
-                    <span className="text-xl">
-                        {filterBlock.title}
-                    </span>
-                    <div className="flex flex-col gap-4 w-fit">
-                        {filterBlock.filters.map((filter, index) => (
-                            <div key={index} className="flex items-center space-x-2 w-fit" onClick={() => handleFilter(filterBlock.filterLabel, filter.value)}>
-                                <Checkbox id={filter.value} />
-                                <label
-                                    htmlFor={filter.value}
-                                    className="text-lg font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                >
-                                    {filter.name}
-                                </label>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-}
-
