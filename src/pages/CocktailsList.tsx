@@ -49,10 +49,12 @@ export const CocktailsList = () => {
                     )}
             </div>
 
-            <PaginationLayout
-                pagination={pagination}
-                handlePaginate={(page: number) => paginateCocktails(currentFilter, page)}
-            />
+            <div className="pt-8 pb-16 lg:py-[100px]">
+                <PaginationLayout
+                    pagination={pagination}
+                    handlePaginate={(page: number) => paginateCocktails(currentFilter, page)}
+                />
+            </div>
         </div>
     );
 };

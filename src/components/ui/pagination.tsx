@@ -116,7 +116,7 @@ function PaginationEllipsis({
 }
 
 export default function PaginationLayout({ pagination, handlePaginate }: { pagination: IPagination, handlePaginate: (page: number) => void }) {
-  const { currentPage, lastPage } = pagination;
+  const { currentPage, lastPage, hasPreviousPage, hasNextPage } = pagination;
 
   const getVisiblePages = (): number[] => {
     if (Object.keys(pagination).length) {
@@ -147,14 +147,14 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
   return (
       <Pagination>
         <PaginationContent>
-          <PaginationItem onClick={() => onPageChange(currentPage - 1)}>
+          <PaginationItem onClick={hasPreviousPage ? () => onPageChange(currentPage - 1) : () => {}}>
             <PaginationPrevious href="#" />
           </PaginationItem>
 
           {visiblePages[0] > 1 ? (
               <>
                 <PaginationItem onClick={() => onPageChange(1)}>
-                  <PaginationLink>1</PaginationLink>
+                  <PaginationLink className={cn("text-3xl font-light cursor-pointer", currentPage === 1 ? "text-black" : "text-black/40")}>1</PaginationLink>
                 </PaginationItem>
                 {visiblePages[0] > 2 && (
                     <PaginationItem>
@@ -166,7 +166,7 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
 
           {visiblePages.map((page: number) => (
               <PaginationItem key={page} onClick={() => onPageChange(page)}>
-                <PaginationLink isActive={page === currentPage}>{page}</PaginationLink>
+                <PaginationLink className={cn("text-3xl font-light cursor-pointer", page === currentPage ? "text-black" : "text-black/40")}>{page}</PaginationLink>
               </PaginationItem>
           ))}
 
@@ -178,12 +178,12 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
                     </PaginationItem>
                 )}
                 <PaginationItem onClick={() => onPageChange(lastPage)}>
-                  <PaginationLink>{lastPage}</PaginationLink>
+                  <PaginationLink className={cn("text-3xl font-light cursor-pointer", currentPage === lastPage ? "text-black" : "text-black/40")}>{lastPage}</PaginationLink>
                 </PaginationItem>
               </>
           )}
 
-          <PaginationItem onClick={() => onPageChange(currentPage + 1)}>
+          <PaginationItem onClick={hasNextPage ? () => onPageChange(currentPage + 1) : () => {}}>
             <PaginationNext href="#" />
           </PaginationItem>
         </PaginationContent>

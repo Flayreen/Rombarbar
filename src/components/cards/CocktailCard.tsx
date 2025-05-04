@@ -11,13 +11,11 @@ export const CocktailCard = (
 
     return (
         <div className="w-full flex flex-col items-center gap-3">
-            <div className="">
-                <img
-                    className="min-h-[244px] object-cover"
-                    src={imageUrl}
-                    alt={title}
-                />
-            </div>
+            <img
+                className="h-[220px] md:h-[400px] lg:h-[500px] w-full object-cover"
+                src={imageUrl}
+                alt={title}
+            />
 
             <p className="text-center text-base sm:text-lg md:text-2xl lg:text-[28px] font-light">
                 {title}
