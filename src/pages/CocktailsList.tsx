@@ -2,7 +2,7 @@ import {CocktailCard} from "@/components/cards/CocktailCard.tsx";
 import {Link} from "react-router-dom";
 import {getPathname} from "@/utils/getPathname.ts";
 import {WebLinks} from "@/routes/routes.ts";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Filters from "@/components/ui/filter.tsx";
 import {useCocktailsStore} from "@/store/cocktails-store.ts";
 import {cocktailsFilters} from "@/modules/cocktails-list/constants.ts";
@@ -11,7 +11,15 @@ import PaginationLayout from "@/components/ui/pagination.tsx";
 
 
 export const CocktailsList = () => {
-    const {fetchCocktails, cocktails, pagination} = useCocktailsStore();
+    const [currentFilter, setCurrentFilter] = useState<Record<string, string[]>>({});
+    const {fetchCocktails, paginateCocktails, cocktails, pagination} = useCocktailsStore();
+
+    const handleFetchCocktails = (filters?: Record<string, string[]>) => {
+        fetchCocktails(filters);
+        if (filters) {
+            setCurrentFilter(filters);
+        }
+    }
 
     useEffect(() => {
         fetchCocktails();
@@ -22,7 +30,7 @@ export const CocktailsList = () => {
             <div>
                 <Filters
                     filterData={cocktailsFilters}
-                    fetchFilterData={fetchCocktails}
+                    fetchFilterData={(filters?: Record<string, string[]>) => handleFetchCocktails(filters)}
                 />
             </div>
 
@@ -43,7 +51,7 @@ export const CocktailsList = () => {
 
             <PaginationLayout
                 pagination={pagination}
-                handlePaginate={(page: number) => fetchCocktails(undefined, page)}
+                handlePaginate={(page: number) => paginateCocktails(currentFilter, page)}
             />
         </div>
     );

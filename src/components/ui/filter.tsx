@@ -6,19 +6,19 @@ import {IFilterData} from "@/types/filter/IFilterData.ts";
 interface IFilterProps {
     className?: string;
     filterData: IFilterData[];
-    fetchFilterData: (filters?: Record<string, string[]>) => void;
+    fetchFilterData: (filters?: Record<string, string[]>, page?: number) => void;
 }
 
 export default function Filters({ className, filterData, fetchFilterData }: IFilterProps) {
     const [initialFilter, setInitialFilter] = useState<Record<string, string[]>>(() =>
-        filterData.reduce((acc, filter) => {
+        filterData.reduce((acc: Record<string, string[]>, filter: IFilterData): Record<string, string[]> => {
             acc[filter.filterLabel] = [];
             return acc;
         }, {} as Record<string, string[]>)
     );
 
     const filterCocktails = (filterLabel: string, value: string): void => {
-        setInitialFilter(prev => {
+        setInitialFilter((prev: Record<string, string[]>) => {
             const currentValues: string[] = prev[filterLabel] || [];
 
             const updatedValues: string[] = currentValues.includes(value)
@@ -34,7 +34,7 @@ export default function Filters({ className, filterData, fetchFilterData }: IFil
 
     useEffect(() => {
         fetchFilterData(initialFilter);
-    }, [initialFilter, fetchFilterData]);
+    }, [initialFilter]);
 
     return (
         <div className={cn("flex flex-row gap-4 justify-between", className)}>
