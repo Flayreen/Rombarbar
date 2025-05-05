@@ -4,7 +4,7 @@ import {WebLinks} from "@/routes/routes.ts";
 
 const Header = () => {
     return (
-        <header className="bg-primary py-2 md:py-3 lg:py-5 fixed top-0 w-full">
+        <header className="bg-primary py-2 md:py-3 lg:py-5 fixed top-0 w-full z-10">
             <div className="container flex justify-between items-center">
                 <Link to={WebLinks.Home}>
                     <div className="h-[31px] md:h-[44px] lg:h-[54px]">
