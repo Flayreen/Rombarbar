@@ -1,7 +1,7 @@
 import {create} from "zustand/react";
 import {ICocktail} from "@/types/cocktail/ICocktail.ts";
 import cocktailsList from "../database/cocktails.json"
-import {paginator, getPaginationData} from "@/utils/paginator.ts";
+import {paginator, getPaginationData, getPageSizeByAdaptive} from "@/utils/paginator.ts";
 import {IPagination} from "@/types/pagination/IPagination.ts";
 
 export interface CocktailsState {
@@ -29,8 +29,8 @@ export const useCocktailsStore = create<CocktailsState>()((set) => ({
         });
 
         set({
-            cocktails: paginator(filteredCocktails, 1),
-            pagination: getPaginationData(filteredCocktails, 1)
+            cocktails: paginator(filteredCocktails, 1, getPageSizeByAdaptive(6, 6, 9)),
+            pagination: getPaginationData(filteredCocktails, 1, getPageSizeByAdaptive(6, 6, 9))
         });
     },
     paginateCocktails: (filters?: Record<string, string[]>, page: number = 1): void => {
@@ -48,8 +48,8 @@ export const useCocktailsStore = create<CocktailsState>()((set) => ({
         });
 
         set({
-            cocktails: paginator(filteredCocktails, page),
-            pagination: getPaginationData(filteredCocktails, page)
+            cocktails: paginator(filteredCocktails, page, getPageSizeByAdaptive(6, 6, 9)),
+            pagination: getPaginationData(filteredCocktails, page, getPageSizeByAdaptive(6, 6, 9))
         });
     },
 }));

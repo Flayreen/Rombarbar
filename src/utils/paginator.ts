@@ -20,3 +20,15 @@ export function getPaginationData<T>(array: T[], page: number, pageSize: number 
         hasPreviousPage
     }
 }
+
+export function getPageSizeByAdaptive (mobileSize: number, tabletSize: number, desktopSize: number): number {
+    const windowWidth: number = window.innerWidth;
+
+    if (windowWidth >= 1024) {
+        return desktopSize;
+    } else if (windowWidth >= 640 && windowWidth < 1024) {
+        return tabletSize;
+    } else {
+        return mobileSize;
+    }
+}
