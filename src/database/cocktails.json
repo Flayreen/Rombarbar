@@ -1,0 +1,350 @@
+[
+  {
+    "id": "aperol",
+    "title": "Апероль",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1661347826507-5cd1020f9442?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBlcm9sJTIwc3ByaXR6fGVufDB8fDB8fHww",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "negroni",
+    "title": "Негроні",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["strong"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "mojito",
+    "title": "Мохіто",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["rum"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "margarita",
+    "title": "Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["tequila"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "bloody-mary",
+    "title": "Блуді Мері",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "pina-colada",
+    "title": "Піна Колада",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["rum"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "cosmopolitan",
+    "title": "Космополітен",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "manhattan",
+    "title": "Мангеттен",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["brandy"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "daiquiri",
+    "title": "Дайкірі",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["rum"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "tequila-sunrise",
+    "title": "Текіла Санрайз",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["tequila"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "white-russian",
+    "title": "Вайт Рашн",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "long-island",
+    "title": "Лонг Айленд",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "espresso-martini",
+    "title": "Еспресо Мартіні",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "whiskey-sour",
+    "title": "Віскі Сауер",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["brandy"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "sex-on-the-beach",
+    "title": "Секс на пляжі",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "blue-lagoon",
+    "title": "Блакитна Лагуна",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "mint-julep",
+    "title": "Мінт Джулеп",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["brandy"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "cuba-libre",
+    "title": "Куба Лібрe",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["rum"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "screwdriver",
+    "title": "Отвірник",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "mai-tai",
+    "title": "Май Тай",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "campari-spritz",
+    "title": "Кампари Спріц",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["liquor"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "gin-tonic",
+    "title": "Джин-Тонік",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "zombie",
+    "title": "Зомбі",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["rum"],
+      "complexity": ["hard"],
+      "strength": ["strong"],
+      "taste": ["spicy"]
+    }
+  },
+  {
+    "id": "tommy-margarita",
+    "title": "Томмі Маргарита",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["interpreted"],
+      "base": ["tequila"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sweet-sour"]
+    }
+  },
+  {
+    "id": "french-75",
+    "title": "Френч 75",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["classic"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "paloma",
+    "title": "Палома",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["popular"],
+      "base": ["tequila"],
+      "complexity": ["easy"],
+      "strength": ["medium"],
+      "taste": ["bitter"]
+    }
+  },
+  {
+    "id": "mocktail-orange",
+    "title": "Апельсиновий моктейль",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["non-alcohol"],
+      "base": ["wine"],
+      "complexity": ["easy"],
+      "strength": ["easy"],
+      "taste": ["sweet"]
+    }
+  },
+  {
+    "id": "lemon-shot",
+    "title": "Лимонний шот",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["shots"],
+      "base": ["vodka"],
+      "complexity": ["easy"],
+      "strength": ["strong"],
+      "taste": ["sour"]
+    }
+  },
+  {
+    "id": "blackberry-bramble",
+    "title": "Брамбл",
+    "imageUrl": "/assets/images/cocktails/bloody-mary.png",
+    "characteristics": {
+      "category": ["author"],
+      "base": ["gin"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sweet-sour"]
+    }
+  }
+]
