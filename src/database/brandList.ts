@@ -11,12 +11,26 @@ export interface IBrandGrouped {
     id: string;
     title: string;
     variations: IBrandList[];
+    characteristics: IBrandGroupedFilterCharacteristics;
+}
+
+export interface IBrandGroupedFilterCharacteristics {
+    size: string[];
+    length: string[];
+    taste: string[];
+    weight: string[];
 }
 
 export const brandGroupedList: IBrandGrouped[] = [
     {
         id: "brandey",
         title: "Бренді",
+        characteristics: {
+            size: ["xl"],
+            length: ["18"],
+            taste: ["very-taste"],
+            weight: ["30"]
+        },
         variations: [
             {
                 id: "jack_daniels",
@@ -47,6 +61,12 @@ export const brandGroupedList: IBrandGrouped[] = [
     {
         id: "gin",
         title: "Джин",
+        characteristics: {
+            size: ["xxl"],
+            length: ["20"],
+            taste: ["sour"],
+            weight: ["40"]
+        },
         variations: [
             {
                 id: "Коньяк",
@@ -77,6 +97,12 @@ export const brandGroupedList: IBrandGrouped[] = [
     {
         id: "vodka",
         title: "Горілка",
+        characteristics: {
+            size: ["xxxl"],
+            length: ["20"],
+            taste: ["nyam-nyam"],
+            weight: ["50"]
+        },
         variations: [
             {
                 id: "Коньяк",
@@ -107,6 +133,12 @@ export const brandGroupedList: IBrandGrouped[] = [
     {
         id: "rum",
         title: "Ром",
+        characteristics: {
+            size: ["xxl"],
+            length: ["18"],
+            taste: ["nyam-nyam"],
+            weight: ["50"]
+        },
         variations: [
             {
                 id: "Коньяк",
@@ -145,6 +177,12 @@ export const brandGroupedList: IBrandGrouped[] = [
     {
         id: "liqueur",
         title: "Лікер",
+        characteristics: {
+            size: ["xl"],
+            length: ["20"],
+            taste: ["very-taste"],
+            weight: ["50"]
+        },
         variations: [
             {
                 id: "Коньяк",
