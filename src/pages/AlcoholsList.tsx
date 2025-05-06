@@ -1,12 +1,22 @@
 import { useState, useEffect} from "react";
-import { IAlcoholList } from "@/database/alcoholList";
-import { alcoholList } from "@/database/alcoholList";
 import StarDivider from '../components/StarDivider';
 import { useNavigate } from 'react-router-dom';
+import {useAlcoholStore} from "@/store/alcohol-store.ts";
+import Filters from "@/components/ui/filter.tsx";
+import {alcoholFilters} from "@/modules/alcohol-list/constants.ts";
+import PaginationLayout from "@/components/ui/pagination.tsx";
 
 export const AlcoholsList = () => {
-    const [alcohols, setAlcohols] = useState<IAlcoholList[]>([]);
     const navigate = useNavigate();
+    const [currentFilter, setCurrentFilter] = useState<Record<string, string[]>>({});
+    const {alcohol, pagination, fetchAlcohol, paginateAlcohol} = useAlcoholStore();
+    const params = new URLSearchParams(window.location.search);
+    const initialFilterState = {
+        size: params.getAll("size"),
+        length: params.getAll("length"),
+        taste: params.getAll("taste"),
+        weight: params.getAll("weight"),
+    }
     
     function useBreakpointColumns() {
         const [columns, setColumns] = useState(2);
@@ -29,7 +39,7 @@ export const AlcoholsList = () => {
 
     const columns = useBreakpointColumns();
 
-    const chunkArray = (arr: typeof alcohols, size: number) => {
+    const chunkArray = (arr: typeof alcohol, size: number) => {
     const chunks = [];
         for (let i = 0; i < arr.length; i += size) {
             chunks.push(arr.slice(i, i + size));
@@ -37,18 +47,32 @@ export const AlcoholsList = () => {
         return chunks;
     };
 
-    const alcoholRows = chunkArray(alcohols, columns);
+    const alcoholRows = chunkArray(alcohol, columns);
 
     useEffect(() => {
-        setAlcohols(alcoholList);
+        fetchAlcohol(initialFilterState);
     }, []);
 
     const handleRedirect = (id: string) => {
         navigate(`/alcohols/${id}`);
     }
 
+    const handleFetchBrands = (filters?: Record<string, string[]>) => {
+        fetchAlcohol(filters);
+        if (filters) {
+            setCurrentFilter(filters);
+        }
+    }
+
     return (
         <div className="container">
+            <div className="flex justify-end items-center w-full mb-6 lg:mb-[80px]">
+                <Filters
+                    initialState={initialFilterState}
+                    filterData={alcoholFilters}
+                    fetchFilterData={(filters?: Record<string, string[]>) => handleFetchBrands(filters)}
+                />
+            </div>
             <div className="flex flex-col items-center mt-6 md:mt-20 gap-2">
                 <h2 className="font-display-georgia uppercase text-[16px] md:text-[24px] font-bold tracking-[0.1em] text-primary">Про алкоголь</h2>
                 <div className="w-28 h-0.25 bg-primary"></div>
@@ -90,6 +114,15 @@ export const AlcoholsList = () => {
                     </div>
                 ))}
             </div>
+
+            {alcohol.length > 0 && (
+                <div className="pt-8 pb-16 lg:py-[100px]">
+                    <PaginationLayout
+                        pagination={pagination}
+                        handlePaginate={(page: number) => paginateAlcohol(currentFilter, page)}
+                    />
+                </div>
+            )}
             <StarDivider variant="dark" className="my-12 md:my-20"/>
         </div>
     );
