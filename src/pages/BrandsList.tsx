@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IBrandGrouped } from "@/database/brandList";
-import { brandGroupedList } from "@/database/brandList";
 import StarDivider from "../components/StarDivider";
+import {useBrandsStore} from "@/store/brands-store.ts";
+import Filters from "@/components/ui/filter.tsx";
+import {brandsFilters} from "@/modules/brands-list/constants.ts";
+import PaginationLayout from "@/components/ui/pagination.tsx";
 
 function useBreakpointColumns() {
     const [columns, setColumns] = useState(2);
@@ -24,9 +27,17 @@ function useBreakpointColumns() {
 }
 
 export const BrandsList = () => {
-    const [brands, setBrands] = useState<IBrandGrouped[]>([]);
     const navigate = useNavigate();
     const columns = useBreakpointColumns();
+    const [currentFilter, setCurrentFilter] = useState<Record<string, string[]>>({});
+    const {brands, pagination, fetchBrands, paginateBrands} = useBrandsStore();
+    const params = new URLSearchParams(window.location.search);
+    const initialFilterState = {
+        size: params.getAll("size"),
+        length: params.getAll("length"),
+        taste: params.getAll("taste"),
+        weight: params.getAll("weight"),
+    }
 
     const chunkArray = (arr: IBrandGrouped[], size: number) => {
         const chunks = [];
@@ -39,15 +50,29 @@ export const BrandsList = () => {
     const brandRows = chunkArray(brands, columns);
 
     useEffect(() => {
-        setBrands(brandGroupedList);
+        fetchBrands(initialFilterState);
     }, []);
 
     const handleRedirect = (id: string) => {
         navigate(`/brands/${id}`);
     };
 
+    const handleFetchBrands = (filters?: Record<string, string[]>) => {
+        fetchBrands(filters);
+        if (filters) {
+            setCurrentFilter(filters);
+        }
+    }
+
     return (
         <div className="container">
+            <div className="flex justify-end items-center w-full mb-6 lg:mb-[80px]">
+                <Filters
+                    initialState={initialFilterState}
+                    filterData={brandsFilters}
+                    fetchFilterData={(filters?: Record<string, string[]>) => handleFetchBrands(filters)}
+                />
+            </div>
             <div className="flex flex-col items-center mt-6 md:mt-20 gap-2">
                 <h2 className="font-display-georgia uppercase text-[16px] md:text-[24px] font-bold tracking-[0.1em] text-primary">
                     Історія брендів
@@ -90,13 +115,21 @@ export const BrandsList = () => {
                         </div>
                         {index < brandRows.length - 1 && (
                             <div className="my-6 md:my-16">
-                                <StarDivider variant="dark" className="my-12 md:my-16" />
+                                <StarDivider variant="dark" className="my-12 md:my-16"/>
                             </div>
                         )}
                     </div>
                 ))}
             </div>
 
+            {brands.length > 0 && (
+                <div className="pt-8 pb-16 lg:py-[100px]">
+                    <PaginationLayout
+                        pagination={pagination}
+                        handlePaginate={(page: number) => paginateBrands(currentFilter, page)}
+                    />
+                </div>
+            )}
 
             <StarDivider variant="dark" className="my-12 md:my-20" />
         </div>

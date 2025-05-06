@@ -154,7 +154,7 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
           {visiblePages[0] > 1 ? (
               <>
                 <PaginationItem onClick={() => onPageChange(1)}>
-                  <PaginationLink className={cn("text-3xl font-light cursor-pointer", currentPage === 1 ? "text-black" : "text-black/40")}>1</PaginationLink>
+                  <PaginationLink className={cn("text-xl font-light cursor-pointer", currentPage === 1 ? "text-black" : "text-black/40")}>1</PaginationLink>
                 </PaginationItem>
                 {visiblePages[0] > 2 && (
                     <PaginationItem>
@@ -166,7 +166,7 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
 
           {visiblePages.map((page: number) => (
               <PaginationItem key={page} onClick={() => onPageChange(page)}>
-                <PaginationLink className={cn("text-3xl font-light cursor-pointer", page === currentPage ? "text-black" : "text-black/40")}>{page}</PaginationLink>
+                <PaginationLink className={cn("text-xl font-light cursor-pointer", page === currentPage ? "text-black" : "text-black/40")}>{page}</PaginationLink>
               </PaginationItem>
           ))}
 
@@ -178,7 +178,7 @@ export default function PaginationLayout({ pagination, handlePaginate }: { pagin
                     </PaginationItem>
                 )}
                 <PaginationItem onClick={() => onPageChange(lastPage)}>
-                  <PaginationLink className={cn("text-3xl font-light cursor-pointer", currentPage === lastPage ? "text-black" : "text-black/40")}>{lastPage}</PaginationLink>
+                  <PaginationLink className={cn("text-xl font-light cursor-pointer", currentPage === lastPage ? "text-black" : "text-black/40")}>{lastPage}</PaginationLink>
                 </PaginationItem>
               </>
           )}
