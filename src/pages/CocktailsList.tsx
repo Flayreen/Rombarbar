@@ -24,7 +24,7 @@ export const CocktailsList = () => {
     useEffect(() => {
         fetchCocktails();
     }, [])
-
+    console.log(cocktails);
     return (
         <div className="container">
             <div>
