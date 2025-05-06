@@ -32,7 +32,7 @@ export const CocktailsList = () => {
     useEffect(() => {
         fetchCocktails(initialFilterState);
     }, [])
-
+    console.log(cocktails);
     return (
         <div className="container">
             <div className="flex justify-end items-center w-full mb-6 lg:mb-[80px]">
