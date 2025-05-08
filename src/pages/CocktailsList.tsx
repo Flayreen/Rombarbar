@@ -13,6 +13,14 @@ import PaginationLayout from "@/components/ui/pagination.tsx";
 export const CocktailsList = () => {
     const [currentFilter, setCurrentFilter] = useState<Record<string, string[]>>({});
     const {fetchCocktails, paginateCocktails, cocktails, pagination} = useCocktailsStore();
+    const params = new URLSearchParams(window.location.search);
+    const initialFilterState = {
+        category: params.getAll("category"),
+        strength: params.getAll("strength"),
+        taste: params.getAll("taste"),
+        base: params.getAll("base"),
+        complexity: params.getAll("complexity"),
+    }
 
     const handleFetchCocktails = (filters?: Record<string, string[]>) => {
         fetchCocktails(filters);
@@ -22,13 +30,14 @@ export const CocktailsList = () => {
     }
 
     useEffect(() => {
-        fetchCocktails();
+        fetchCocktails(initialFilterState);
     }, [])
 
     return (
         <div className="container">
-            <div>
+            <div className="flex justify-end items-center w-full mb-6 lg:mb-[80px]">
                 <Filters
+                    initialState={initialFilterState}
                     filterData={cocktailsFilters}
                     fetchFilterData={(filters?: Record<string, string[]>) => handleFetchCocktails(filters)}
                 />
@@ -49,12 +58,14 @@ export const CocktailsList = () => {
                     )}
             </div>
 
-            <div className="pt-8 pb-16 lg:py-[100px]">
-                <PaginationLayout
-                    pagination={pagination}
-                    handlePaginate={(page: number) => paginateCocktails(currentFilter, page)}
-                />
-            </div>
+            {cocktails.length > 0 && (
+                <div className="pt-8 pb-16 lg:py-[100px]">
+                    <PaginationLayout
+                        pagination={pagination}
+                        handlePaginate={(page: number) => paginateCocktails(currentFilter, page)}
+                    />
+                </div>
+            )}
         </div>
     );
 };
