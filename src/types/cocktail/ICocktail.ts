@@ -5,4 +5,8 @@ export interface ICocktail {
     title: string;
     imageUrl: string;
     characteristics: IFilterCharacteristics;
+    ingredients: string[];
+    method: string;
+    subject: string;
+    videoLink: string;
 }
