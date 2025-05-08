@@ -39,6 +39,10 @@ export const CocktailRecipe = () => {
                         alt={currentCocktail.title}
                     />
                 </CustomDashedBorderBase>
+
+                <div className="flex flex-col items-center">
+                    <span>ІНГРЕДІЄНТИ:</span>
+                </div>
             </div>
         </div>
     );
