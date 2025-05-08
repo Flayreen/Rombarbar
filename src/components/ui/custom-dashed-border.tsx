@@ -112,7 +112,7 @@ export default function CustomDashedBorderBase({
 } : CustomDashedBorderBase) {
 
     return (
-        <div className="relative">
+        <div className="relative h-fit">
             <CustomDashedBorder
                 top={withoutBorders ? undefined : top || {color: "#512E1240", height: 1, stripe: 10, spacing: 10}}
                 right={withoutBorders ? undefined : right || {color: "#512E1240", width: 1, stripe: 10, spacing: 10}}
