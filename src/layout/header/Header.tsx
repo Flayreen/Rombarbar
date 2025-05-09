@@ -1,11 +1,15 @@
 import {Link} from "react-router-dom";
 import Sidebar from "@/layout/Sidebar.tsx";
 import {WebLinks} from "@/routes/routes.ts";
+import SearchHeader from "@/layout/header/SearchHeader.tsx";
 
 const Header = () => {
     return (
         <header className="bg-primary py-2 md:py-3 lg:py-5 fixed top-0 w-full z-10">
             <div className="container flex justify-between items-center">
+                <div className="block lg:hidden">
+                    <SearchHeader />
+                </div>
                 <Link to={WebLinks.Home}>
                     <div className="h-[31px] md:h-[44px] lg:h-[54px]">
                         <img src="/assets/images/logo.png" alt="logo" className="h-full"/>
