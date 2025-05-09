@@ -28,7 +28,7 @@ export const Home = () => {
                 />
             </div>
 
-            <div>
+            <div className="mt-[100vh]">
                 <div className="flex flex-col items-center gap-2">
                     <h2 className="font-display-georgia uppercase text-[16px] md:text-[24px] xl:text-[32px] font-bold tracking-[0.1em] text-primary">
                         Рекомендуємо
