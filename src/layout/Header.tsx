@@ -1,16 +1,33 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Sidebar from "@/layout/Sidebar.tsx";
-import {WebLinks} from "@/routes/routes.ts";
+import { WebLinks } from "@/routes/routes.ts";
+import useScrolledPast from "@/hooks/useScrolledPast";
 
 const Header = () => {
+    const scrolled = useScrolledPast(window.innerHeight - 50);
+
     return (
-        <header className="bg-primary py-2 md:py-3 lg:py-5 fixed top-0 w-full z-10">
+        <header
+            className={`fixed top-0 w-full z-10 transition-all duration-300 ${
+                scrolled ? "bg-primary" : "bg-transparent"
+            } py-2 md:py-3 lg:py-5`}
+        >
             <div className="container flex justify-between items-center">
-                <Link to={WebLinks.Home}>
-                    <div className="h-[31px] md:h-[44px] lg:h-[54px]">
-                        <img src="/assets/images/logo.png" alt="logo" className="h-full"/>
-                    </div>
-                </Link>
+                <div className="h-8 w-8">
+                    <img src="/assets/svgs/burger-menu.svg" alt="menu" />
+                </div>
+
+                {scrolled && (
+                    <Link to={WebLinks.Home}>
+                        <div className="h-[31px] md:h-[44px] lg:h-[54px]">
+                            <img
+                                src="/assets/images/logo.png"
+                                alt="logo"
+                                className="h-full"
+                            />
+                        </div>
+                    </Link>
+                )}
 
                 <div>
                     <nav className="hidden lg:block">
@@ -28,7 +45,7 @@ const Header = () => {
                     </nav>
 
                     <div className="lg:hidden">
-                        <Sidebar/>
+                        <Sidebar />
                     </div>
                 </div>
             </div>
