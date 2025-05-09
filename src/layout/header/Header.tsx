@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Sidebar from "@/layout/Sidebar.tsx";
 import { WebLinks } from "@/routes/routes.ts";
 import useScrolledPast from "@/hooks/useScrolledPast";
+import SearchHeader from "@/layout/header/SearchHeader.tsx";
 
 const Header = () => {
     const scrolled = useScrolledPast(window.innerHeight - 50);
@@ -13,8 +14,8 @@ const Header = () => {
             } py-2 md:py-3 lg:py-5`}
         >
             <div className="container flex justify-between items-center">
-                <div className="h-8 w-8">
-                    <img src="/assets/svgs/burger-menu.svg" alt="menu" />
+                <div className="block lg:hidden">
+                    <SearchHeader />
                 </div>
 
                 {scrolled && (

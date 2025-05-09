@@ -129,6 +129,7 @@ export const CocktailRecipe = () => {
                     </span>
                     <div className="w-28 h-0.25 bg-primary"></div>
                 </div>
+                // TODO: add recommended cocktails
             </div>
         </div>
     );
