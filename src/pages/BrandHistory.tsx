@@ -3,6 +3,7 @@ import { IBrandGrouped } from "@/database/brandList";
 import { brandGroupedList } from "@/database/brandList";
 import ArrowLeftIcon from "@/components/ui/arrows/ArrowLeftIcon";
 import StarDivider from "@/components/StarDivider";
+import CustomDashedBorderBase from "@/components/ui/custom-dashed-border";
 
 export const BrandHistory = () => {
     const { id } = useParams();
@@ -32,8 +33,10 @@ export const BrandHistory = () => {
                     <li key={index}>
                         <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 mb-16 mt-12`}>
                             <div className="flex flex-col items-center gap-8 mb-8">
-                                <span className="uppercase text-primary font-bold text-[12px] md:text-[20px] xl:text-[24px] font-display-georgia tracking-[0.1em] py-2 px-4 border border-dashed border-primary">{variation.name}</span>
-                                <div className="h-[300px] md:h-[453px] xl:h-[756px] md:w-[418px] xl:w-[726px] w-auto"><img src={`/assets/images/brandHistory/${variation.id}.png`} alt={`${variation.name}`} className="h-[300px] md:h-[453px] xl:h-[756px] md:w-[418px] xl:w-[726px]  w-auto"/></div>
+                                <CustomDashedBorderBase className="p-2 lg:p-4 h-fit">
+                                    <span className="uppercase text-primary font-bold text-[12px] md:text-[20px] xl:text-[24px] font-display-georgia tracking-[0.1em] py-2 px-4 ">{variation.name}</span>
+                                </CustomDashedBorderBase>
+                                <div className="h-[300px] md:h-[453px] xl:h-[756px] md:w-[418px] xl:w-[726px] w-auto"><img src={`/assets/images/brandHistory/${variation.id}.png`} alt={`${variation.name}`} className="h-[300px] md:h-[453px] xl:h-[756px] md:w-[418px] xl:w-[726px]  w-auto"/></div>  
                             </div>
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col items-center md:items-start gap-2 mb-3">
