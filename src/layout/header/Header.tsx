@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import Sidebar from "@/layout/Sidebar.tsx";
 import { WebLinks } from "@/routes/routes.ts";
 import useScrolledPast from "@/hooks/useScrolledPast";
+import SearchHeader from "@/layout/header/SearchHeader.tsx";
+
 
 const Header = () => {
     const location = useLocation();
@@ -18,7 +20,7 @@ const Header = () => {
                 scrolled ? "md:justify-between" : "md:justify-center"
             }`}>
                 <div className="h-8 w-8 md:hidden">
-                    <img src="/assets/svgs/burger-menu.svg" alt="menu" />
+                    <SearchHeader />
                 </div>
 
                 {scrolled && (
