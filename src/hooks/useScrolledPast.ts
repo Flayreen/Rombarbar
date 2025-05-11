@@ -8,7 +8,7 @@ const useScrolledPast = (threshold: number = 0): boolean => {
             setScrolled(window.scrollY > threshold);
         };
 
-        handleScroll(); 
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);

@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Sidebar from "@/layout/Sidebar.tsx";
 import { WebLinks } from "@/routes/routes.ts";
 import useScrolledPast from "@/hooks/useScrolledPast";
 
 const Header = () => {
-    const scrolled = useScrolledPast(window.innerHeight - 50);
+    const location = useLocation();
+    const isHome = location.pathname === "/";
+    const scrolled = isHome ? useScrolledPast(window.innerHeight - 50) : true;
 
     return (
         <header
@@ -12,8 +14,10 @@ const Header = () => {
                 scrolled ? "bg-primary" : "bg-transparent"
             } py-2 md:py-3 lg:py-5`}
         >
-            <div className="container flex justify-between items-center">
-                <div className="h-8 w-8">
+            <div className={`container flex justify-between items-center  ${
+                scrolled ? "md:justify-between" : "md:justify-center"
+            }`}>
+                <div className="h-8 w-8 md:hidden">
                     <img src="/assets/svgs/burger-menu.svg" alt="menu" />
                 </div>
 
@@ -30,21 +34,21 @@ const Header = () => {
                 )}
 
                 <div>
-                    <nav className="hidden lg:block">
+                    <nav className="hidden md:block">
                         <ul className="flex gap-6">
-                            <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
+                            <li className="font-display-georgia font-bold text-white text-base xl:text-[16px] p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
                                 <Link to={WebLinks.Alcohols}>ПРО АЛКОГОЛЬ</Link>
                             </li>
-                            <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
+                            <li className="font-display-georgia font-bold text-white text-base xl:text-[16px] p-2.5 border border-transparent hover:border-b-1 hover:border-b-white">
                                 <Link to={WebLinks.Brands}>ІСТОРІЯ БРЕНДІВ</Link>
                             </li>
-                            <li className="text-white text-base p-2.5 border border-transparent hover:border-b-1 hover:border-b-white animate-in">
+                            <li className="font-display-georgia font-bold text-white text-base xl:text-[16px] p-2.5 border border-transparent hover:border-b-1 hover:border-b-white animate-in">
                                 <Link to={WebLinks.Cocktails}>КАТЕГОРІЯ КОКТЕЙЛІВ</Link>
                             </li>
                         </ul>
                     </nav>
 
-                    <div className="lg:hidden">
+                    <div className="md:hidden">
                         <Sidebar />
                     </div>
                 </div>
