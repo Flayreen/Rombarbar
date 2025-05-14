@@ -1,5 +1,3 @@
-import { IAlcoholListFilterCharacteristics } from "./IAlcoholListFilterCharacteristics";
-
 export interface IAlcoholList {
     id: string;
     title: string;
@@ -8,7 +6,6 @@ export interface IAlcoholList {
     types: string;
     howToDrink: string;
     facts: string;
-    characteristics: IAlcoholListFilterCharacteristics;
 }
 
 
