@@ -1,7 +1,8 @@
 import {create} from "zustand/react";
 import {paginator, getPaginationData, getPageSizeByAdaptive} from "@/utils/paginator.ts";
 import {IPagination} from "@/types/pagination/IPagination.ts";
-import {brandGroupedList, IBrandGrouped} from "@/database/brandList.ts";
+import {brandGroupedList} from "@/database/brandList.ts";
+import {IBrandGrouped} from "@/types/brand/IBrandGrouped.ts";
 
 export interface BrandsState {
     brands: IBrandGrouped[],

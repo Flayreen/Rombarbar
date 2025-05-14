@@ -12,7 +12,8 @@ import {
 import cocktailsList from "@/database/cocktails.json"
 import { IAlcoholList } from "@/types/alcohol/IAlcoholList";
 import alcoholList from "../../database/alcoholList.json"
-import {brandGroupedList, IBrandGrouped} from "@/database/brandList.ts";
+import {brandGroupedList} from "@/database/brandList.ts";
+import {IBrandGrouped} from "@/types/brand/IBrandGrouped.ts";
 import {ICocktail} from "@/types/cocktail/ICocktail.ts";
 import {useNavigate} from "react-router-dom";
 import {PopoverClose} from "@radix-ui/react-popover";
