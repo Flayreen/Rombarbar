@@ -9,4 +9,5 @@ export interface ICocktail {
     method: string;
     subject: string;
     videoLink: string;
+    tasteDescription: string;
 }

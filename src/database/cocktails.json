@@ -1,5 +1,73 @@
 [
   {
+    "id": "bloody-mary",
+    "title": "Кривава Мері",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1661347826507-5cd1020f9442?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBlcm9sJTIwc3ByaXR6fGVufDB8fDB8fHww",
+    "characteristics": {
+      "category": ["classic", "popular"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["strong"],
+      "taste": ["spicy", "salty"]
+    },
+    "ingredients": [
+      "45 мл Горілка",
+      "90 мл Томатний сік",
+      "15 мл Свіжовичавлений лимонний сік",
+      "2 шматочки Вустерширського сиру",
+      "Соус Табаско",
+      "Перець (за смаком)"
+    ],
+    "method": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол.",
+    "subject": "Celery, Lemon Wedge (Optional)",
+    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM",
+    "tasteDescription": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол."
+  },
+  {
+    "id": "blue-lagoon",
+    "title": "Голуба Лагуна",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1661347826507-5cd1020f9442?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBlcm9sJTIwc3ByaXR6fGVufDB8fDB8fHww",
+    "characteristics": {
+      "category": ["classic", "popular"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sweet", "fruity"]
+    },
+    "ingredients": [
+      "50 мл Горілка",
+      "30 мл Лікер Блю Курасао",
+      "100 мл Сік ананасовий",
+      "1-2 краплі лимонного соку"
+    ],
+    "method": "Змішати всі інгредієнти в шейкері з льодом, струсити і перелити в стакан хайбол.",
+    "subject": "Lemon Wedge (Optional)",
+    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM",
+    "tasteDescription": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол."
+  },
+  {
+    "id": "green-kiwi",
+    "title": "Зелений з Ківі",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1661347826507-5cd1020f9442?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBlcm9sJTIwc3ByaXR6fGVufDB8fDB8fHww",
+    "characteristics": {
+      "category": ["refreshing"],
+      "base": ["vodka"],
+      "complexity": ["medium"],
+      "strength": ["medium"],
+      "taste": ["sweet", "fruity"]
+    },
+    "ingredients": [
+      "50 мл Горілка",
+      "30 мл Лікер м'ятний",
+      "100 мл Сік яблучний",
+      "1-2 стиглих ківі"
+    ],
+    "method": "Змішати всі інгредієнти в шейкері з льодом, струсити і перелити в стакан.",
+    "subject": "Kiwi Slice (Optional)",
+    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM",
+    "tasteDescription": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол."
+  },
+  {
     "id": "aperol",
     "title": "Апероль",
     "imageUrl": "https://plus.unsplash.com/premium_photo-1661347826507-5cd1020f9442?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBlcm9sJTIwc3ByaXR6fGVufDB8fDB8fHww",
@@ -20,7 +88,8 @@
     ],
     "method": "Обережно перемішати всі інгредієнти в склянці для змішування з льодом, перелити в келих для рок-н-ролу.\u2028Примітка: За бажанням подавати з льодом, перелити в келих хайбол.",
     "subject": "Celery, Lemon Wedge (Optional)",
-    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM"
+    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM",
+    "tasteDescription": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол."
   },
   {
     "id": "negroni",
@@ -43,6 +112,7 @@
     ],
     "method": "Обережно перемішати всі інгредієнти в склянці для змішування з льодом, перелити в келих для рок-н-ролу.\u2028Примітка: За бажанням подавати з льодом, перелити в келих хайбол.",
     "subject": "Celery, Lemon Wedge (Optional)",
-    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM"
+    "videoLink": "https://www.youtube.com/watch?v=nKm-ze1aBxM",
+    "tasteDescription": "Змішати всі інгредієнти в шейкері з льодом і ретельно струсити. Перелити в стакан хайбол."
   }
 ]

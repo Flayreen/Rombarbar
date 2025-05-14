@@ -2,21 +2,12 @@ import { useState, useEffect} from "react";
 import StarDivider from '../components/StarDivider';
 import { useNavigate } from 'react-router-dom';
 import {useAlcoholStore} from "@/store/alcohol-store.ts";
-import Filters from "@/components/ui/filter.tsx";
-import {alcoholFilters} from "@/modules/alcohol-list/constants.ts";
 import PaginationLayout from "@/components/ui/pagination.tsx";
+import {IAlcoholList} from "@/types/alcohol/IAlcoholList.ts";
 
 export const AlcoholsList = () => {
     const navigate = useNavigate();
-    const [currentFilter, setCurrentFilter] = useState<Record<string, string[]>>({});
     const {alcohol, pagination, fetchAlcohol, paginateAlcohol} = useAlcoholStore();
-    const params = new URLSearchParams(window.location.search);
-    const initialFilterState = {
-        size: params.getAll("size"),
-        length: params.getAll("length"),
-        taste: params.getAll("taste"),
-        weight: params.getAll("weight"),
-    }
     
     function useBreakpointColumns() {
         const [columns, setColumns] = useState(2);
@@ -50,36 +41,22 @@ export const AlcoholsList = () => {
     const alcoholRows = chunkArray(alcohol, columns);
 
     useEffect(() => {
-        fetchAlcohol(initialFilterState);
+        fetchAlcohol();
     }, []);
 
     const handleRedirect = (id: string) => {
         navigate(`/alcohols/${id}`);
     }
 
-    const handleFetchBrands = (filters?: Record<string, string[]>) => {
-        fetchAlcohol(filters);
-        if (filters) {
-            setCurrentFilter(filters);
-        }
-    }
-
     return (
         <div className="container">
-            <div className="flex justify-end items-center w-full mb-6 lg:mb-[80px]">
-                <Filters
-                    initialState={initialFilterState}
-                    filterData={alcoholFilters}
-                    fetchFilterData={(filters?: Record<string, string[]>) => handleFetchBrands(filters)}
-                />
-            </div>
             <div className="flex flex-col items-center mt-6 md:mt-20 gap-2">
                 <h2 className="font-display-georgia uppercase text-[16px] md:text-[24px] font-bold tracking-[0.1em] text-primary">Про алкоголь</h2>
                 <div className="w-28 h-0.25 bg-primary"></div>
             </div>
             <StarDivider variant="dark" className="my-12 md:my-16"/>
             <div className="space-y-10 p-4">
-                {alcoholRows.map((row, index) => (
+                {alcoholRows.map((row: IAlcoholList[], index: number) => (
                     <div key={index}>
                     <div
                         className={`grid gap-6 ${
@@ -89,9 +66,9 @@ export const AlcoholsList = () => {
                         'grid-cols-4'
                         }`}
                     >
-                        {row.map((alcohol) => (
+                        {row.map((alcohol: IAlcoholList, index: number) => (
                             <div
-                                key={alcohol.id}
+                                key={index}
                                 className="bg-white transition text-center"
                                 onClick={() => handleRedirect(alcohol.id)}
                             >
@@ -119,11 +96,10 @@ export const AlcoholsList = () => {
                 <div className="pt-8 pb-16 lg:py-[100px]">
                     <PaginationLayout
                         pagination={pagination}
-                        handlePaginate={(page: number) => paginateAlcohol(currentFilter, page)}
+                        handlePaginate={(page: number) => paginateAlcohol(page)}
                     />
                 </div>
             )}
-            <StarDivider variant="dark" className="my-12 md:my-20"/>
         </div>
     );
 };
