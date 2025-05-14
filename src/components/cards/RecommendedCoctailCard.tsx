@@ -89,8 +89,8 @@ export const RecommentedCocktailCard = ({
   };
 
   return (
-    <div className="relative container bg-primary py-5 overflow-hidden">
-      <div className="xl:hidden">
+    <div className="relative bg-primary py-5 overflow-hidden">
+      <div className="xl:hidden container">
         {fruitElements}
         <div className="flex flex-col items-center gap-2 mt-10">
           <h2
@@ -102,7 +102,7 @@ export const RecommentedCocktailCard = ({
           <div className="w-28 h-px" style={getTitleColorStyleBg(id)}></div>
         </div>
         <div className="flex flex-col items-center md:flex-row-reverse">
-          <img className="w-[50vw] max-w-[250px] md:max-w-[350px]" src={imageUrl} alt={title} />
+          <img className="w-[50vw] max-w-[250px] md:max-w-[350px] " src={imageUrl} alt={title} />
           <div className="flex flex-col">
             <div className="flex flex-col items-center gap-7 mt-10 relative z-10">
               <h3 className="font-display-georgia md:w-full uppercase text-[16px] md:text-[24px] tracking-[0.18em] text-white">
@@ -139,9 +139,9 @@ export const RecommentedCocktailCard = ({
         </div>
       </div>
 
-      <div className="hidden xl:block">
+      <div className="hidden xl:block container">
         {fruitElements}
-        <div className="flex flex-col items-center gap-2 mt-10">
+        <div className="flex flex-col items-center gap-2 mt-10 z-10">
           <h2
             className={`font-display-georgia uppercase text-[16px] md:text-[24px] xl:text-[32px] font-bold tracking-[0.1em]
             )}`}
@@ -151,16 +151,8 @@ export const RecommentedCocktailCard = ({
           </h2>
           <div className="w-28 h-0.25 bg-white"></div>
         </div>
-        <div className="flex mt-10 mb-20">
+        <div className="flex items-center mb-20">
           <div className="flex-1 flex flex-col gap-8">
-            <div className="flex flex-col items-center gap-7 mt-10 relative z-10">
-              <h3 className="font-display-georgia w-full uppercase text-[32px] tracking-[0.18em] text-white">
-                Подача:
-              </h3>
-              <p className="font-raleway w-full text-[20px] tracking-[0.1em] leading-[1.8] text-white">
-                {subject}
-              </p>
-            </div>
             <div className="flex flex-col items-center gap-7 mt-10 relative z-10">
               <h3 className="font-display-georgia w-full uppercase text-[32px] tracking-[0.18em] text-white">
                 Інгредієнти:
@@ -176,8 +168,16 @@ export const RecommentedCocktailCard = ({
                 ))}
               </div>
             </div>
+            <div className="flex flex-col items-center gap-7 mt-10 relative z-10">
+              <h3 className="font-display-georgia w-full uppercase text-[32px] tracking-[0.18em] text-white">
+                Подача:
+              </h3>
+              <p className="font-raleway w-full text-[20px] tracking-[0.1em] leading-[1.8] text-white">
+                {subject}
+              </p>
+            </div>
           </div>
-          <img className="flex-1 w-[50vw] max-w-[464px]" src={imageUrl} alt={title} />
+          <img className="flex-1 w-[50vw] max-w-[464px] opacity-0" src={imageUrl} alt={title} />
           <div className="flex-1 flex flex-col items-center gap-7 mt-10 relative z-10">
             <h3 className="font-display-georgia w-full uppercase text-[32px] tracking-[0.18em] text-white">
               Метод приготування:

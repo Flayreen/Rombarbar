@@ -10,6 +10,7 @@ import cocktailsList from "@/database/cocktails.json";
 import CustomDashedBorderBase from "@/components/ui/custom-dashed-border.tsx";
 import {useMediaQuery} from "@/hooks/use-media-query.tsx";
 import { RecommentedCocktailCard } from "@/components/cards/RecommendedCoctailCard";
+import FixedImageUntilTarget from "@/components/cards/FixedImageUntilTarget";
 
 const categoryFilter = cocktailsFilters.find(
     (filter) => filter.filterLabel === "category"
@@ -48,7 +49,7 @@ export const Home = () => {
     
     return (
         <div>
-            <div className="absolute h-[100vh] w-full top-0">
+            <div className="absolute h-[100vh] w-full top-0 z-10">
                 <img
                     src="/assets/images/home/hero.png"
                     loading="eager"
@@ -61,38 +62,44 @@ export const Home = () => {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] md:w-[40vw] xl:w-[25vw]"
                 />
             </div>
-
-            <div className="mt-[100vh]">
-                <div className="flex flex-col items-center gap-2 mb-8">
+            <FixedImageUntilTarget
+                imageUrls={[
+                    '/assets/images/home/RecommentedCoctail/bloody-mary.png',
+                    '/assets/images/home/RecommentedCoctail/blue-lagoon.png',
+                    '/assets/images/home/RecommentedCoctail/green-kiwi.png'
+                ]}
+                sectionIds={['cocktail-0', 'cocktail-1', 'cocktail-2']}
+                targetId="stop-block"
+            />
+            <div className="mt-[100vh] ">
+                <div className="flex flex-col items-center gap-2 mb-8 z-10">
                     <h2 className="font-display-georgia uppercase text-[16px] md:text-[24px] xl:text-[32px] font-bold tracking-[0.1em] text-primary">
                         Рекомендуємо
                     </h2>
                     <div className="w-28 h-0.25 bg-primary"></div>
                 </div>
-                {/* <RecommendedCocktails /> */}
 
                 <div className="cocktail-list">
-                    {selectedCocktails.map(cocktail => (
-                        <Link
-                            key={cocktail.id}
-                            to={`/cocktails/${cocktail.id}`}
-                            className="block"
-                        >
+                    {selectedCocktails.map((cocktail, index) => (
+                        <Link key={cocktail.id} to={`/cocktails/${cocktail.id}`} className="block">
+                        <div id={`cocktail-${index}`}>
                             <RecommentedCocktailCard
-                                id={cocktail.id}
-                                title={cocktail.title}
-                                imageUrl={`/assets/images/home/RecommentedCoctail/${cocktail.id}.png`}
-                                imageUrlFruit={`/assets/images/home/RecommentedCoctail/fruits/${cocktail.id}.png`}
-                                ingredients={cocktail.ingredients}
-                                method={cocktail.method}
-                                subject={cocktail.subject}
+                            id={cocktail.id}
+                            title={cocktail.title}
+                            imageUrl={`/assets/images/home/RecommentedCoctail/${cocktail.id}.png`}
+                            imageUrlFruit={`/assets/images/home/RecommentedCoctail/fruits/${cocktail.id}.png`}
+                            ingredients={cocktail.ingredients}
+                            method={cocktail.method}
+                            subject={cocktail.subject}
                             />
+                        </div>
                         </Link>
                     ))}
                 </div>
            
             </div> 
-            <div className="mx-auto px-4 md:px-0 max-w-[1400px] flex flex-col items-start gap-6 md:gap-0 mb-8 md:flex-row md:bg-[url('/assets/images/home/about_us.png')] bg-no-repeat bg-cover">
+            <div id="stop-block" className="w-full h-16 bg-primary"></div>
+            <div  className="mx-auto px-4 md:px-0 max-w-[1400px] flex flex-col items-start gap-6 md:gap-0 mb-8 md:flex-row md:bg-[url('/assets/images/home/about_us.png')] bg-no-repeat bg-cover">
                 <div className="flex flex-col gap-7 md:gap-10 xl:gap-14 md:bg-[rgba(0,0,0,0.8)] md:w-[50vw] max-w-[700px] md:pt-18 md:pr-5 md:pb-30 md:pl-12 xl:pt-50 xl:pr-12 xl:pb-54 xl:pl-25">
                     <div className="flex flex-col items-center gap-2">
                         <h2 className="font-display-georgia uppercase text-[16px] md:text-[20px] xl:text-[24px] font-bold tracking-[0.1em] text-primary md:text-white">
@@ -106,7 +113,7 @@ export const Home = () => {
                 </div>
                 <img className="md:w-[50vw] md:max-w-[700px] md:invisible" src="/assets/images/home/about_us.png" alt="" />
             </div>
-            <div className="mx-auto px-4 md:px-0 max-w-[1400px] flex flex-col mt-8 mb-20">
+            <div id="stop-block"  className="mx-auto px-4 md:px-0 max-w-[1400px] flex flex-col mt-8 mb-20">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-4">
                     <div className="flex flex-col gap-6 md:gap-8 xl:gap-10 md:ml-8 xl:ml-12">
                         <div className="flex flex-col items-center gap-2">
