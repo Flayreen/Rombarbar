@@ -72,6 +72,14 @@ export const CocktailRecipe = () => {
                             </div>
                         </div>
                         <div className="flex md:hidden lg:flex flex-col gap-5">
+                            <span className="text-base md:text-xl lg:text-2xl">ОПИС СМАКУ:</span>
+                            <div className="flex flex-col gap-1 md:gap-2">
+                                <p className="font-raleway font-light tracking-wide text-sm md:text-xl">
+                                    {currentCocktail.tasteDescription}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex md:hidden lg:flex flex-col gap-5">
                             <span className="text-base md:text-xl lg:text-2xl">ПОДАЧА:</span>
                             <div className="flex flex-col gap-1 md:gap-2">
                                 <p className="font-raleway font-light tracking-wide text-sm md:text-xl">
@@ -89,6 +97,14 @@ export const CocktailRecipe = () => {
                     <div className="flex flex-col gap-1 md:gap-2">
                         <p className="font-raleway font-light tracking-wide text-sm md:text-xl">
                             {currentCocktail.method}
+                        </p>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-5">
+                    <span className="text-base md:text-xl lg:text-2xl">ОПИС СМАКУ:</span>
+                    <div className="flex flex-col gap-1 md:gap-2">
+                        <p className="font-raleway font-light tracking-wide text-sm md:text-xl">
+                            {currentCocktail.tasteDescription}
                         </p>
                     </div>
                 </div>
