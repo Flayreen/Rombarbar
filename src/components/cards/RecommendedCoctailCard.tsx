@@ -102,7 +102,7 @@ export const RecommentedCocktailCard = ({
           <div className="w-28 h-px" style={getTitleColorStyleBg(id)}></div>
         </div>
         <div className="flex flex-col items-center md:flex-row-reverse">
-          <img className="w-[50vw] max-w-[250px] md:max-w-[350px] " src={imageUrl} alt={title} />
+          <img className="w-[50vw] max-w-[250px] md:max-w-[350px] opacity-0" src={imageUrl} alt={title} />
           <div className="flex flex-col">
             <div className="flex flex-col items-center gap-7 mt-10 relative z-10">
               <h3 className="font-display-georgia md:w-full uppercase text-[16px] md:text-[24px] tracking-[0.18em] text-white">

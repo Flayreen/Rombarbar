@@ -10,7 +10,8 @@ import {
     CommandSeparator
 } from "@/components/ui/command.tsx";
 import cocktailsList from "@/database/cocktails.json"
-import {alcoholList, IAlcoholList} from "@/database/alcoholList.ts";
+import { IAlcoholList } from "@/types/alcohol/IAlcoholList";
+import alcoholList from "../../database/alcoholList.json"
 import {brandGroupedList, IBrandGrouped} from "@/database/brandList.ts";
 import {ICocktail} from "@/types/cocktail/ICocktail.ts";
 import {useNavigate} from "react-router-dom";

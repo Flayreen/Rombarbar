@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { IBrandGrouped } from "@/database/brandList";
+import { IBrandGrouped } from "@/types/brand/IBrandGrouped"
 import { brandGroupedList } from "@/database/brandList";
 import ArrowLeftIcon from "@/components/ui/arrows/ArrowLeftIcon";
 import StarDivider from "@/components/StarDivider";

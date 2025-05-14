@@ -16,14 +16,63 @@ const FixedImageUntilTarget: React.FC<FixedImageUntilTargetProps> = ({
   const [stoppedTop, setStoppedTop] = useState(0);
   const [isFixed, setIsFixed] = useState(true);
   const [isStopped, setIsStopped] = useState(false);
+  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const [zIndex, setZIndex] = useState(-1);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY || window.pageYOffset);
     };
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+  
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+  
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setZIndex(1);
+          } else {
+            // Перевіримо, чи жодна інша секція більше не в полі зору
+            const stillVisible = sectionIds.some(sectionId => {
+              const el = document.getElementById(sectionId);
+              if (!el) return false;
+              const rect = el.getBoundingClientRect();
+              return rect.top < window.innerHeight && rect.bottom > 0;
+            });
+            if (!stillVisible) setZIndex(-1);
+          }
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+  
+      observer.observe(element);
+      observers.push(observer);
+    });
+  
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, [sectionIds]);
+  
 
   useEffect(() => {
     const target = document.getElementById(targetId);
@@ -81,19 +130,30 @@ const FixedImageUntilTarget: React.FC<FixedImageUntilTargetProps> = ({
   const currentImg = imageUrls[index] || '';
   const nextImg = imageUrls[index + 1] || '';
 
+  // Позиціонування залежно від ширини екрана
+  let left = '50%';
+  let transform = 'translateX(-50%)';
+
+  if (windowWidth >= 768 && windowWidth < 1280) {
+    left = '90%';
+    transform = 'translateX(-100%)';
+  } else if (windowWidth >= 1280) {
+    left = '50%';
+    transform = 'translateX(-50%)';
+  }
+
   return (
     <div
       ref={containerRef}
       style={{
         position: isFixed ? 'fixed' : 'absolute',
         top: isFixed ? '120px' : `${stoppedTop}px`,
-        left: '50%',
-        transform: 'translateX(-50%)',
-        height: '40vw',
-        zIndex: 1,
+        left,
+        transform,
+        zIndex: zIndex,
         pointerEvents: 'none',
       }}
-      className="w-[60vw] max-w-[250px] md:max-w-[350px] lg:max-w-[464px] overflow-hidden relative"
+      className="w-[60vw] h-[80vw] md:w-[60vw] md:h-[40vw] xl:w-[60vw] xl:h-[40vw] max-w-[250px] md:max-w-[350px] lg:max-w-[464px] overflow-hidden relative"
     >
       {/* Поточне зображення */}
       <img
@@ -101,8 +161,8 @@ const FixedImageUntilTarget: React.FC<FixedImageUntilTargetProps> = ({
         alt=""
         style={{
           width: '100%',
-          height: `${100 - progress * 100}%`, // Змінюється висота зображення
-          objectFit: 'cover', // Збереження пропорцій
+          height: `${100 - progress * 100}%`,
+          objectFit: 'cover',
         }}
       />
 
@@ -113,8 +173,8 @@ const FixedImageUntilTarget: React.FC<FixedImageUntilTargetProps> = ({
           alt=""
           style={{
             width: '100%',
-            height: `${progress * 100}%`, // Змінюється висота наступного зображення
-            objectFit: 'cover', // Збереження пропорцій
+            height: `${progress * 100}%`,
+            objectFit: 'cover',
           }}
         />
       )}
