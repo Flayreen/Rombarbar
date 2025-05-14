@@ -12,7 +12,7 @@ export const AlcoholHistory = () => {
     if(!alcohol) {
         return <div>Alcohol not found!</div>;
     }
-
+    console.log(alcohol.id)
     return (
         <div>
             <div className="hidden md:block max-w-[1400px] mx-auto relative">

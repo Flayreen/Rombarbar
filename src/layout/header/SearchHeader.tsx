@@ -12,7 +12,7 @@ import {
 import cocktailsList from "@/database/cocktails.json"
 import { IAlcoholList } from "@/types/alcohol/IAlcoholList";
 import alcoholList from "../../database/alcoholList.json"
-import {brandGroupedList} from "@/database/brandList.ts";
+import brandGroupedList from "@/database/brandList.json";
 import {IBrandGrouped} from "@/types/brand/IBrandGrouped.ts";
 import {ICocktail} from "@/types/cocktail/ICocktail.ts";
 import {useNavigate} from "react-router-dom";
@@ -33,7 +33,7 @@ export default function SearchHeader() {
                         <CommandEmpty>Нічого не знайдено.</CommandEmpty>
                         <CommandGroup heading="Коктейлі">
                             {cocktailsList.map((cocktail: ICocktail, index: number) => (
-                                <PopoverClose className="w-full">
+                                <PopoverClose className="w-full" key={index}>
                                     <CommandItem key={index} onSelect={() => navigate(`/cocktails/${cocktail.id}`)}>
                                         <div className="flex flex-row gap-3 items-center">
                                             <img
@@ -50,7 +50,7 @@ export default function SearchHeader() {
                         <CommandSeparator/>
                         <CommandGroup heading="Алкоголь">
                             {alcoholList.map((alcohol: IAlcoholList, index: number) => (
-                                <PopoverClose className="w-full">
+                                <PopoverClose className="w-full" key={index}>
                                     <CommandItem key={index} onSelect={() => navigate(`/alcohols/${alcohol.id}`)}>
                                         <div className="flex flex-row gap-3 items-center">
                                             <img
@@ -66,8 +66,8 @@ export default function SearchHeader() {
                         </CommandGroup>
                         <CommandSeparator/>
                         <CommandGroup heading="Бренди">
-                            {brandGroupedList.map((brand: IBrandGrouped, index: number) => (
-                                <PopoverClose className="w-full">
+                            {Object.values(brandGroupedList).flat().map((brand: IBrandGrouped, index: number) => (
+                                <PopoverClose className="w-full" key={index}>
                                     <CommandItem key={index} onSelect={() => navigate(`/brands/${brand.id}`)}>
                                         <div className="flex flex-row gap-3 items-center">
                                             <img
