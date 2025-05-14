@@ -1,7 +1,8 @@
 import {create} from "zustand/react";
 import {paginator, getPaginationData, getPageSizeByAdaptive} from "@/utils/paginator.ts";
 import {IPagination} from "@/types/pagination/IPagination.ts";
-import {alcoholList, IAlcoholList} from "@/database/alcoholList.ts";
+import { IAlcoholList } from "@/types/alcohol/IAlcoholList";
+import alcoholList from "../database/alcoholList.json"
 
 export interface AlcoholState {
     alcohol: IAlcoholList[],

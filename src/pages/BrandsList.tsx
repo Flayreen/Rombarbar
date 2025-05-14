@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { IBrandGrouped } from "@/database/brandList";
+import { IBrandGrouped } from "@/types/brand/IBrandGrouped";
 import StarDivider from "../components/StarDivider";
 import {useBrandsStore} from "@/store/brands-store.ts";
 import Filters from "@/components/ui/filter.tsx";
